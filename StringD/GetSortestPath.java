@@ -1,32 +1,31 @@
 package StringD;
 
 public class GetSortestPath {
-    static float GetSortestPath1(String path){
-        int x=0;
-        int y=0;
 
-        for(int i=0;i<path.length();i++){
-            if(path.charAt(i) == 'N'){
+    static float GetSortestPath1(String path) {
+        int x = 0;
+        int y = 0;
+
+        for (int i = 0; i < path.length(); i++) {
+            if (path.charAt(i) == 'N') {
                 y++;
-            }
-            else if(path.charAt(i)=='S'){
+            } else if (path.charAt(i) == 'S') {
                 y--;
-            }
-            else if(path.charAt(i)=='W'){
+            } else if (path.charAt(i) == 'W') {
                 x--;
-            }
-            else{
+            } else {
                 x++;
             }
 
         }
-        int x2=(x*x);
-        int y2=(y*y);
-        return (float) Math.sqrt(x2+y2);
-    
+        int x2 = (x * x);
+        int y2 = (y * y);
+        return (float) Math.sqrt(x2 + y2);
+
     }
+
     public static void main(String[] args) {
-        String path="WNEENESENNN";
-        System.out.println("Sortest Path"+GetSortestPath1(path));
+        String path = "WNEENESENNN";
+        System.out.println("Sortest Path " + GetSortestPath1(path));
     }
 }
